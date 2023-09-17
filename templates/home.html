@@ -12,28 +12,44 @@
 
 <body>
 
+    {% include 'header.html' %}
+
     <div class="container">
         <h1>Deepak Yadav</h1>
         <img id="image" src="../static/hero.jpg" alt="" class="img-fluid">
         <h2>About Deepak Yadav</h2>
-        <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore dignissimos debitis sapiente
-            facere perspiciatis repellat ullam doloribus quae tenetur ex. Aut quia qui maiores quod hic aperiam nemo
-            minus laudantium temporibus deleniti. Non sunt enim architecto quae deleniti consectetur blanditiis quis
-            culpa iste accusantium. Accusamus ratione magni corrupti iure repellendus.</p>
+        <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6">
+                <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore dignissimos
+                    debitis
+                    sapiente
+                    facere perspiciatis repellat ullam doloribus quae tenetur ex. Aut quia qui maiores quod hic aperiam
+                    nemo
+                    minus laudantium temporibus deleniti. Non sunt enim architecto quae deleniti consectetur blanditiis
+                    quis
+                    culpa iste accusantium. Accusamus ratione magni corrupti iure repellendus.
+                </p>
+            </div>
+            <div class="col-md-6 d-none d-md-block">
+                <img src="/static/people.jpg" height="320px" alt="">
+            </div>
+
+        </div>
 
         <h2>Recieving Responses</h2>
         <p>
             {% for job in jobs%}
-                {% include 'jobitem.html'%}
+            {% include 'jobitem.html'%}
             {% endfor %}
         </p>
 
         <div class="text-center">
-            <button class="btn btn-primary btn-lg ">Contact Us</button>
-            <p>&copy;2023, Deepak Yadav</p>
+            <a href="mailto:work.deepak04@gmail.com?subject=Question about responses" class="btn btn-primary btn-lg ">Contact Us</a>
         </div>
 
     </div>
+
+    {%include 'footer.html'%}
 
 </body>
 
