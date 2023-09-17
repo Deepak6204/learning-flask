@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+
+h1,h2{
+    text-align: center;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: normal;
+}
+
+#image{
+    height: 360px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#h3{
+    color: grey;
+    margin-bottom: 4px;
+}

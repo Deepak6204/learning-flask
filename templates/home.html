@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Tut</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Deepak Yadav</h1>
+        <img id="image" src="../static/hero.jpg" alt="" class="img-fluid">
+        <h2>About Deepak Yadav</h2>
+        <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore dignissimos debitis sapiente
+            facere perspiciatis repellat ullam doloribus quae tenetur ex. Aut quia qui maiores quod hic aperiam nemo
+            minus laudantium temporibus deleniti. Non sunt enim architecto quae deleniti consectetur blanditiis quis
+            culpa iste accusantium. Accusamus ratione magni corrupti iure repellendus.</p>
+
+        <h2>Recieving Responses</h2>
+        <p>
+            {% for job in jobs%}
+                {% include 'jobitem.html'%}
+            {% endfor %}
+        </p>
+
+        <div class="text-center">
+            <button class="btn btn-primary btn-lg ">Contact Us</button>
+            <p>&copy;2023, Deepak Yadav</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
